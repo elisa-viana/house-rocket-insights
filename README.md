@@ -31,7 +31,7 @@ A tabela abaixo contém informações a respeito da base de dados.
 |date| Data que cada casa foi vendida
 |price| Valor de venda
 |bedrooms| Número de quartos
-|bathrooms| Número de banheiro, onde .5 refere-se a lavabos (i.e. sem chuveiro)
+|bathrooms| Número de banheiros, onde .5 refere-se a lavabos (i.e. sem chuveiro)
 |sqft_living| Tamanho construído do imóvel em pés quadrados
 |sqft_lot| Tamanho total do terreno em pés quadrados
 |floors| Número de andares
