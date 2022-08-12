@@ -81,7 +81,7 @@ Para responder as questões de negócio, os dados foram coletados, processados, 
 
 - Questão de negócio 1: 
   - Para responder a primeira questão de negócio, os dados foram agrupados por zipcode e a mediana do preço dos grupos de imóveis foram obtidos. Primeiramente, foram consideradas como recomendadas para compra apenas imóveis cujo preço estava abaixo da mediana regional e que receberam classificação 3 ou acima de 3 para o atributo 'condition'; 
-  - Como resultado, mais de 10 mil imóveis foram classificados como recomendados. Para melhorar o sistema de recomendação, uma nova filtragem dos dados foi realizada. Agora foram classificados como recomendados apenas imóveis cuja condição recebeu classificação 5, resultando em 698 imóveis. 
+  - Como resultado, mais de 10 mil imóveis foram classificados como recomendados. Para melhorar o sistema de recomendação, uma nova filtragem dos dados foi realizada. Agora foram classificados como recomendados apenas imóveis cuja condição recebeu classificação 5, resultando em 698 imóveis; 
   - Utilizando os resultados obtidos pelos insights e seguindo o modelo de negócio da empresa, uma nova rodada de seleção foi estabelecida e os imóveis recomendados foram aqueles que: 
     1. Não possuiam vista para água; 
     2. Possuíam 3 banheiros ou menos; 
@@ -91,8 +91,8 @@ Para responder as questões de negócio, os dados foram coletados, processados, 
     6. O índice de classificação da vista do imóvel é menor que 4. 
 
 - Questão de negócio 2: 
-  - 648 imóveis foram utilizados para responder a segunda questão. Os dados foram agrupados por zipcode e pela estação do ano em que os imóveis foram disponibilizados para venda. A mediana do preço de cada grupo foi obtida. 
-  - Foi realizada uma comparação entre os preços dos imóveis e o valor mediano por estação e zipcode. Foi estabelecida uma margem de lucro da venda de 10% sobre os imóveis cujo preço estava acima do valor da mediana e de 30% sobre os imóveis cujo preço estava abaixo do valor da mediana. 
+  - 648 imóveis foram utilizados para responder a segunda questão. Os dados foram agrupados por zipcode e pela estação do ano em que os imóveis foram disponibilizados para venda. A mediana do preço de cada grupo foi obtida; 
+  - Foi realizada uma comparação entre os preços dos imóveis e o valor mediano por estação e zipcode. Foi estabelecida uma margem de lucro da venda de 10% sobre os imóveis cujo preço estava acima do valor da mediana e de 30% sobre os imóveis cujo preço estava abaixo do valor da mediana; 
   - O lucro foi agrupado para cada estação do ano afim de entender qual o melhor período para vender os imóveis adquiridos. 
 
 <h1 align="left"> 4. Principais insights</h1>
