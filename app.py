@@ -55,25 +55,27 @@ def first_page (image):
         st.subheader('Main Results')
         st.write(
         "1. At first, only houses with good condition (index 3 or more) and with prices lower than the regional median were considered as recommended to buy. "
-        "More than 10 thousend properties full filled the conditions.  \n"
+        "More than 10 thousand properties fulfilled the conditions.  \n"
         "2. To improve the recommendation system, only houses with excellent conditions were considered. "
         "We also use the information given by the insights to reduce the number of recommended properties.  \n"
-        "3. The final list has 648 properties with good conditions and lower prices than the region median.  \n"
+        "3. The final list has 648 properties with good conditions and lower prices than the regional median.  \n"
         "4. The best season to sell the properties is spring, when the average revenue per house is up to U$84,000.00.  \n"
-        "5. The results of the insights sections are summarized in the table below.  \n"
+        "5. Adopting the strategy outlined through this project, the average profit obtained per property is U$81,000.00, "
+        "reaching a net profit of up to 52 million dollars.  \n"
+        "6. The results of the insights sections are summarized in the table below.  \n"
         )
 
         #criando a tabela
         values = [['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'H7', 'H8', 'H9', 'H10'],
-                  ['Properties that has water view are 30% more expensive, on average.',
+                  ['Properties that have water view are 30% more expensive, on average.',
                    'Properties built before 1955 are 50% cheaper, on average.',
-                   'Properties without basement have a total area 40% higher than properties that has basement, on average.',
+                   'Properties without basement have a total area 40% higher than properties that has a basement, on average.',
                    'The Year-over-Year increase is 10%.',
                    'Properties with 3 bathrooms has a Month-over-Month increase of 15%.',
                    'Properties with 2 or more floors are 25% more expensive than the others, on average.',
-                   'Renovated properties are 40% more expensive than non renovated properties, on average.',
-                   'Properties that has 3 bathrooms or less are 30% cheaper than others, on average.',
-                   'Properties with higher level of construction and design are, on average, 30% more expensive than others.',
+                   'Renovated properties are 40% more expensive than non-renovated properties, on average.',
+                   'Properties that have 3 bathrooms or less are 30% cheaper than others, on average.',
+                   'Properties with a higher level of construction and design are, on average, 30% more expensive than others.',
                    'Properties with an excellent view are, on average, 40% more expensive than others.'],
                   ['True',
                    'False',
@@ -85,10 +87,10 @@ def first_page (image):
                    'True',
                    'True',
                    'True'],
-                  ['Buy houses whithout water view.',
-                   'Invest in properties regardless the year of construction.',
+                  ['Buy houses without water view.',
+                   'Invest in properties regardless of the year of construction.',
                    '-',
-                   'Invest in properties regardeless of the year that the sell was announced.',
+                   'Invest in properties regardless of the year that the sell was announced.',
                    'Invest in properties in the lower cost months.',
                    'Invest in properties with 2 floors or less.',
                    'Invest in unrenovated properties and renovated them to sell.',
@@ -161,7 +163,7 @@ def business_questions (data):
 
         # texto
         st.write('The data overview is displayed in this section. The table below shows the general information about '
-                 'all the properties avaiable to buy. The "status" column provides the strategy for each property '
+                 'all the properties available to buy. The "status" column provides the strategy for each property '
                  '(i.e. if the property is recommended or not to buy). More info about the strategy adopted for the recommendation system '
                  'are available in the "Home" section.')
         st.write('To see the properties information for each zipcode, please, choose one (or more) in the sidebar menu.')
@@ -245,8 +247,8 @@ def business_questions (data):
         df_q2_seasonal_price['date'] = df_q2_seasonal_price['date'].dt.strftime("%Y-%m-%d")
 
         # texto
-        st.write('In this section, only the recommended houses are displayed. More than 10 thousend properties were selected '
-                 'with the previous recommendation strategy. To refine the recommendation we use the information given by the insights section. '
+        st.write('In this section, only the recommended houses are displayed. More than 10 thousand properties were selected '
+                 'with the previous recommendation strategy. To refine the recommendation we use the information given in the insights section. '
                  'The table below shows information about the suggested selling prices of each property selected and '
                  'their respective suggested selling price and revenue.')
         st.write('To see the properties information for each zipcode, please, choose one (or more) in the sidebar menu.')
@@ -273,8 +275,8 @@ def business_questions (data):
                                 hover_data=['selling price', 'revenue'])
 
             # texto
-            st.write('The following map shows the properties recommended for buy. Bigger and darker spots represents more '
-                     'expensives properties. We can notice that the properties close to a water resource are, in general, more expensives. '
+            st.write('The following map shows the properties recommended for buy. Bigger and darker spots represent more '
+                     'expensive properties. We can notice that the properties close to a water resource are, in general, more expensive. '
                      'More details about the properties features and their relation with the price can be found in the "Insights" section.')
 
             # mostrando a figura
@@ -282,8 +284,10 @@ def business_questions (data):
 
         with c2:
             st.header('Price strategy')
-            st.write('The image below shows the mean revenue by house sold for each season. '
-                     'According to this, spring is the best season for sell the properties.')
+            st.write('The image below shows the average revenue by house sold for each season. '
+                     'According to this, spring is the best season for selling properties, in general. However, '
+                     'the average revenue per season varies for each location. '
+                     'Select a zipcode in the sidebar for more detailed information.')
 
             ps = px.histogram(data_frame=df_q2_seasonal_price, x='season', y='revenue',
                         labels={  # replaces default labels by column name
