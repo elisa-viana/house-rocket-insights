@@ -522,7 +522,7 @@ if __name__ == '__main__':
     path = 'kc_house_data.csv'
     data = get_data(path)
 
-    image_path = 'House.png'
+    image_path = 'assets/House.png'
     image = get_image(image_path)
 
     #pages construction
