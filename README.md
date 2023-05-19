@@ -73,7 +73,7 @@ A tabela abaixo contém informações a respeito da base de dados.
 - Pycharm
 - Jupyter notebook
 - Streamlit
-- Heroku cloud
+- Streamlit cloud
 
 <h3 align="left"> 3.3. Processo</h3>
 
@@ -114,4 +114,4 @@ Para responder as questões de negócio, os dados foram coletados, processados, 
 
 <h1 align="left"> Outras informações</h1>
 
-O aplicativo está disponível para consulta em: https://hr-insights-eapv.herokuapp.com/
+O aplicativo está disponível para consulta em: https://house-rocket-bg.streamlit.app/
